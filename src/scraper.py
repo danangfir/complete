@@ -24,4 +24,3 @@ def scrape_page(url=BASE_URL):
             print(f"Error during scraping: {e}")
             return None
     
-        
