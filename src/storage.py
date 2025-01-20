@@ -10,6 +10,6 @@ def save_to_json(data, filename="output/data/results.json"):
 
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w") as f:
-        json.dump(data, f, indent=4)
+        json.dump(data, f, indent=4, ensure_ascii=False)
     print("Data saved successfully!")
     
