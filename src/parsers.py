@@ -9,14 +9,21 @@ def parser_html(html):
         return None
     
     # membuat request
-    r = requests.get(BASE_URL)
-    soup = BeautifulSoup(r.content, 'html.parser')
+    # r = requests.get(BASE_URL)
+    # soup = BeautifulSoup(r.content, 'html.parser')
     
     
     # Jika Berjalan kita command
-    #  soup = BeautifulSoup(html.content, 'html.parser')
+    response = requests.get(BASE_URL)
+    soup = BeautifulSoup(response.text, 'html.parser')
     
-    # Ekstrak judul halaman
+    # MEncari semua Nama Novel
+    books = soup.find_all('article', class_='product_pod')
+    
+    # kita gunakan Loop buat mengekstrak semua nama novel
+    for book in books:
+        title = book.h3.a['title']
+        print(title)
 
 
 
