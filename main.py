@@ -2,6 +2,7 @@ from src.config import BASE_URL
 from src.parsers import parser_html
 from src.storage import save_to_json
 from src.scraper import scrape_page
+from src.utils import clean_text
 
 if __name__ == "__main__":
     asci = """

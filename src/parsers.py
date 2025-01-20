@@ -30,7 +30,7 @@ def parser_html(html):
             rating = "No Rating"
             
         # Ambil Harga
-        price = book.find('p', class_='price_color').text
+        price = book.find('p', class_='price_color').text.strip()
         
         # Tambahkan list ke data
         data.append({
