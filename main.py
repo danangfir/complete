@@ -2,7 +2,6 @@ from src.config import BASE_URL
 from src.parsers import parser_html
 from src.storage import save_to_json
 from src.scraper import scrape_page
-from src.utils import clean_text
 
 if __name__ == "__main__":
     asci = """
@@ -15,14 +14,14 @@ if __name__ == "__main__":
     """
     print(asci)
 
-    print("Scraping page...")
-    html = scrape_page()
-    if not html:
-        print("Failed to scrape the page or no content returned.")
+    print("Scraping all pages...")
+    html_pages = scrape_page()  
+    if not html_pages:
+        print("Failed to scrape the pages or no content returned.")
         exit()
 
-    print("Parsing HTML content...")
-    data = parser_html(html)
+    print("Parsing HTML content from all pages...")
+    data = parser_html(html_pages)  
     if not data:
         print("Failed to parse HTML or no data extracted.")
         exit()

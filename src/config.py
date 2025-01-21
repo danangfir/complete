@@ -1,4 +1,4 @@
-BASE_URL = "https://books.toscrape.com/index.html"  # URL target
+BASE_URL = "https://books.toscrape.com/catalogue/category/books_1"
 HEADLESS = True  
 TIMEOUT = 30  
 

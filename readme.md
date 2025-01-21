@@ -1,10 +1,9 @@
-This project is to complete all tasks from the web: https://books.toscrape.com/index.html
-
+This project is to complete all tasks from the web: https://books.toscrape.com/catalogue/category/books_1
 A scraper example with pagination 
 
 using bs4, playwright and other
 
-example data:
+example data json:
 
 ```json
 [
